@@ -1,0 +1,48 @@
+{
+  "name": "drive-watch",
+  "version": "0.0.0",
+  "description": "Watch for drive mount/eject events in OS X",
+  "main": "./lib/",
+  "author": {
+    "name": "Overlook Motel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/overlookmotel/drive-watch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/overlookmotel/drive-watch/issues"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "chai": "^3.3.0",
+    "jshint": "^2.8.0",
+    "istanbul": "^0.3.21",
+    "coveralls": "^2.11.4"
+  },
+  "keywords": [
+    "drive",
+    "watch",
+    "mount",
+    "unmount",
+    "eject",
+    "event",
+    "events"
+  ],
+  "scripts": {
+    "test": "make test",
+    "cover": "make cover"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "readmeFilename": "README.md",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/overlookmotel/drive-watch/raw/master/License"
+    }
+  ]
+}
