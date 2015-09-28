@@ -4,6 +4,6 @@
 
 * Initial release
 
-## Next
+## 0.1.2
 
 * Event handler is optional
