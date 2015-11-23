@@ -8,6 +8,6 @@
 
 * Event handler is optional
 
-## Next
+## 0.2.0
 
 * Ubuntu support (external drives only)
