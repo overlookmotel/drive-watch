@@ -14,7 +14,8 @@
     "url": "https://github.com/overlookmotel/drive-watch/issues"
   },
   "dependencies": {
-    "fs-extra-promise": "^0.3.0"
+    "fs-extra-promise": "^0.3.0",
+    "lodash": "^3.10.1"
   },
   "devDependencies": {
     "mocha": "^2.3.3",

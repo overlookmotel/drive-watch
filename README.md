@@ -10,7 +10,7 @@
 [![Dev dependency Status](https://img.shields.io/david/dev/overlookmotel/drive-watch.svg)](https://david-dm.org/overlookmotel/drive-watch)
 [![Coverage Status](https://img.shields.io/coveralls/overlookmotel/drive-watch/master.svg)](https://coveralls.io/r/overlookmotel/drive-watch)
 
-API is subject to change in later versions (v0.2.0). No tests but it seems to work. OS X only!
+API is subject to change in later versions (v0.4.0). No tests but it seems to work. OS X only, with untested support for Ubuntu.
 
 ## Usage
 
@@ -45,7 +45,7 @@ dw.start()
 
 This outputs:
 
-```
+```js
 // Initial output
 Drives: [ 'Macintosh HD' ]
 
@@ -55,6 +55,48 @@ Event: mount - MyDrive
 // Eject the drive
 Event: eject - MyDrive
 ```
+
+### Options
+
+#### `scanInterval`
+
+In case of `fs.watch` not registering a drive being mounted/ejected (happens sometimes on OS X when a drive is pulled without being safely ejected), `drive-watch` also scans the drives periodically and calls the handler accordingly.
+
+`options.scanInterval` sets the interval in milliseconds that a scan is performed. Set to a falsy value (e.g. `0`) to disable periodic scanning.
+
+```js
+// Scan once a minute
+var dw = new DriveWatch(
+    function(eventType, driveName) { /* handle event */ },
+    { scanInterval: 60000 }
+);
+```
+
+```js
+// Disable periodic scanning
+var dw = new DriveWatch(
+    function(eventType, driveName) { /* handle event */ },
+    { scanInterval: 0 }
+);
+```
+
+#### `handler`
+
+An alternative way to provide the event handler.
+
+```js
+var dw = new DriveWatch( {
+    handler: function(eventType, driveName) { /* handle event */ },
+    scanInterval: 10000
+} );
+
+// ...is same as
+var dw = new DriveWatch(
+    function(eventType, driveName) { /* handle event */ },
+    { scanInterval: 10000 }
+);
+```
+
 
 ## Tests
 
