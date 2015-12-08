@@ -12,6 +12,6 @@
 
 * Ubuntu support (external drives only)
 
-## Next
+## 0.3.0
 
 * Periodic scan for changes
