@@ -1,5 +1,7 @@
 # drive-watch.js
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/overlookmotel/drive-watch.svg)](https://greenkeeper.io/)
+
 # Watch for drive mount/eject events in OS X
 
 ## Current status
